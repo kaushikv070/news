@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+table {
+    border: 4px solid black;
+   
+    border-collapse: inherit;
+    margin-bottom: 4rem;
+  
+    
+  }
+  .subtext {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10pt;
+    color: #828282;
+}
+
+.subtext2 {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10pt;
+    color:#ff6600;
+}
+
+.title {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12pt;
+    
+}
+.link{
+   color:  #ff6600;
+   font-size:15pt
+}
+  
+.flex{
+    Position:absolute;
+    right:120px;
+}
+    
