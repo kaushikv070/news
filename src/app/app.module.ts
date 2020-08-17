@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StripPipe } from './strip.pipe';
 import { DatePipe } from './date.pipe';
 import { ChartsModule } from 'ng2-charts';
+import { NewsFeedService } from './news-feed.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { ChartsModule } from 'ng2-charts';
     HttpClientModule,
     ChartsModule
   ],
-  providers: [],
+  providers: [NewsFeedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

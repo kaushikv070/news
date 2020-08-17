@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { timeout, catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +15,10 @@ export class NewsFeedService {
   public sendGetRequest(page){
     return this.httpClient.get(this.REST_API_SERVER+page);
     
+  }
+
+  public getData(){
+    return this.httpClient.get(this.REST_API_SERVER+0);
   }
 }
 
