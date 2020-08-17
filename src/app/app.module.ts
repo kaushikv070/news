@@ -22,7 +22,7 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     HttpClientModule,
     ChartsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('/dist/news/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [NewsFeedService],
   bootstrap: [AppComponent]
