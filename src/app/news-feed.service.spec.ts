@@ -1,26 +1,36 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, async, inject } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import {HttpClientModule} from '@angular/common/http';
+
 
 import { NewsFeedService } from './news-feed.service';
 
 describe('NewsFeedService', () => {
-  let service: NewsFeedService;
+  let postService: NewsFeedService;
+  let httpMock: HttpTestingController;
 
-  
-    beforeEach(() => TestBed.configureTestingModule({
-        imports: [HttpClientTestingModule], 
-        providers: [NewsFeedService]
-  }));
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [
+        HttpClientTestingModule,
+      ],
+      providers: [
+        NewsFeedService
+      ],
+    });
 
-  it('should be created', () => {
-    const service= TestBed.get(NewsFeedService);
-        expect(service).toBeTruthy();
-   });
+    postService = TestBed.get(NewsFeedService);
+    //httpMock = TestBed.get(HttpTestingController);
+  });
+
+  it(`should fetch posts as an Observable`, async(inject([HttpTestingController, NewsFeedService],
+    (httpClient: HttpTestingController, postService: NewsFeedService) => {
+
+      postService.sendGetRequest(0)
+      .subscribe((posts: any) => {
+        expect(posts.length).toBe(10);
+      });
 
 
-   it('should have getData function', () => {
-    const service = TestBed.get(NewsFeedService);
-    expect(service.getData().toBeTruthy());
-   });
+    })));
 });
+
