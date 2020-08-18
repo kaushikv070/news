@@ -9,5 +9,5 @@ branches:
 before_script:
   - npm install -g @angular/cli
 script:
-- ng lint
+- ng lint news --fix
 - ng build --prod --base-href https://github.com/kaushikv070/news
