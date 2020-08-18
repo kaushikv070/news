@@ -17,9 +17,7 @@ export class NewsFeedService {
     
   }
 
-  public getData(){
-    return this.httpClient.get(this.REST_API_SERVER+0);
-  }
+ 
 }
 
 

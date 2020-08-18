@@ -44,6 +44,10 @@ export class AppComponent {
     this.loaddata(false);
 
   }
+  bookmark(){
+    localStorage.setItem("pageNo",JSON.stringify(this.currentPage));
+    alert("This Page has been bookmarked!");
+  }
 
   loaddata(fromPagination){
 
@@ -58,12 +62,15 @@ export class AppComponent {
       });
     }else{
       //console.log("inservicecall");
+      if(!fromPagination && localStorage.getItem("pageNo")){
+        this.currentPage=JSON.parse(localStorage.getItem("pageNo"));
+      }
       this.service.sendGetRequest(this.currentPage?this.currentPage:0).subscribe((news: News)=>{
        
         this.news=news.hits;
         this.currentPage=news.page;
         sessionStorage.setItem('currentPage',JSON.stringify(this.currentPage));
-        console.log(this.news);
+        //console.log(this.news);
         sessionStorage.setItem('news',JSON.stringify(this.news));
        
         
