@@ -14,12 +14,12 @@
         <tr *ngFor="let feed of news; let i = index">
           <td>{{ feed.num_comments}}</td>
           <td>{{ feed.points }}</td>
-          <td><a [routerLink]="" (click)="castVote(feed.objectID,i)"><img src="/assets/positive-charges.png" alt="image" height="10"></a></td>
+          <td><a [routerLink]="" id="vote" (click)="castVote(i)"><img src="/assets/positive-charges.png" alt="image" height="10"></a></td>
           <td class="title">{{ feed.title }}
              <span class="subtext">(<a class="subtext" href='{{feed.url}}'>{{feed.url | strip:[20]}}</a>) by </span> 
             <span>{{feed.author}}</span> 
             <span class="subtext"> {{feed.created_at | date}} [</span>  
-            <span class="subtext"><a class="subtext2" [routerLink]="" (click)="removeItem(i,feed.points,feed.objectID)">Hide</a></span>
+            <span class="subtext"><a class="subtext2" [routerLink]="" (click)="removeItem(i)">Hide</a></span>
             <span class="subtext">]</span>
          </td>
         </tr>
@@ -32,8 +32,8 @@
          
   
       <div class="flex">
-         <span class="prev" *ngIf="currentPage>0"><a class="link" [routerLink]="" (click)="prevData()">Previous | </a></span>
-         <span class="next"><a class="link" [routerLink]="" (click)="nextData()"> Next</a></span>
+         <span class="prev" *ngIf="currentPage>0"><a class="link" id="prev" [routerLink]="" (click)="prevData()">Previous | </a></span>
+         <span class="next"><a class="link" id="next" [routerLink]="" (click)="nextData()"> Next</a></span>
       </div>
 </table>
 

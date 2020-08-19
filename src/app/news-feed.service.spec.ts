@@ -5,8 +5,6 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { NewsFeedService } from './news-feed.service';
 
 describe('NewsFeedService', () => {
-  let postService: NewsFeedService;
-  let httpMock: HttpTestingController;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -18,14 +16,14 @@ describe('NewsFeedService', () => {
       ],
     });
 
-    postService = TestBed.get(NewsFeedService);
-    //httpMock = TestBed.get(HttpTestingController);
+    const postService  = TestBed.get(NewsFeedService);
+    // httpMock = TestBed.get(HttpTestingController);
   });
 
   it(`should fetch posts as an Observable`, async(inject([HttpTestingController, NewsFeedService],
-    (httpClient: HttpTestingController, postService: NewsFeedService) => {
+    (httpClient: HttpTestingController, postService1: NewsFeedService) => {
 
-      postService.sendGetRequest(0)
+      postService1.sendGetRequest(0)
       .subscribe((posts: any) => {
         expect(posts.length).toBe(10);
       });

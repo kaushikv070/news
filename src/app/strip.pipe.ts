@@ -8,13 +8,13 @@ export class StripPipe implements PipeTransform {
   transform(value: string, args: any[]): string {
     const limit = args.length > 0 ? parseInt(args[0], 10) : 20;
     const trail = args.length > 1 ? args[1] : '';
-    if(value=='' || value==null){
+    if (value === '' || value === null){
       return value;
     }
-     const a=value.indexOf("//");
+    const a = value.indexOf('//');
     // const b= value.indexOf(".com")
-   
-    return value.length > limit ? value.substring(a+2, limit) + trail : value;
+
+    return value.length > limit ? value.substring(a + 2, limit) + trail : value;
    }
 
 }
