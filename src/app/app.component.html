@@ -14,7 +14,7 @@
         <tr *ngFor="let feed of news; let i = index">
           <td>{{ feed.num_comments}}</td>
           <td>{{ feed.points }}</td>
-          <td><a [routerLink]="" id="vote" (click)="castVote(i)"><img src="/assets/positive-charges.png" alt="image" height="10"></a></td>
+          <td><a [routerLink]="" id="vote" (click)="castVote(i)"><img src="/assets/icons/arrow.svg" alt="image" height="10"></a></td>
           <td class="title">{{ feed.title }}
              <span class="subtext">(<a class="subtext" href='{{feed.url}}'>{{feed.url | strip:[20]}}</a>) by </span> 
             <span>{{feed.author}}</span> 
