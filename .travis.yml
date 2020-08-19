@@ -12,3 +12,11 @@ script:
 - ng lint news --fix
 - npm run test-headless
 - ng build --prod --base-href https://github.com/kaushikv070/news
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/news
+  on:
+    branch: master
