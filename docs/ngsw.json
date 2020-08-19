@@ -1,0 +1,82 @@
+{
+  "configVersion": 1,
+  "timestamp": 1597824388573,
+  "index": "https://kaushikv070.github.io/news/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://kaushikv070.github.io/news/favicon.ico",
+        "https://kaushikv070.github.io/news/index.html",
+        "https://kaushikv070.github.io/news/main.9e458667993ffd6d789d.js",
+        "https://kaushikv070.github.io/news/manifest.webmanifest",
+        "https://kaushikv070.github.io/news/polyfills.a4021de53358bb0fec14.js",
+        "https://kaushikv070.github.io/news/runtime.e227d1a0e31cbccbf8ec.js",
+        "https://kaushikv070.github.io/news/styles.f4544bc3fbef0acc805b.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://kaushikv070.github.io/news/assets/icons/icon-128x128.png",
+        "https://kaushikv070.github.io/news/assets/icons/icon-144x144.png",
+        "https://kaushikv070.github.io/news/assets/icons/icon-152x152.png",
+        "https://kaushikv070.github.io/news/assets/icons/icon-192x192.png",
+        "https://kaushikv070.github.io/news/assets/icons/icon-384x384.png",
+        "https://kaushikv070.github.io/news/assets/icons/icon-512x512.png",
+        "https://kaushikv070.github.io/news/assets/icons/icon-72x72.png",
+        "https://kaushikv070.github.io/news/assets/icons/icon-96x96.png",
+        "https://kaushikv070.github.io/news/assets/positive-charges.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://kaushikv070.github.io/news/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://kaushikv070.github.io/news/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://kaushikv070.github.io/news/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://kaushikv070.github.io/news/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://kaushikv070.github.io/news/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://kaushikv070.github.io/news/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://kaushikv070.github.io/news/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://kaushikv070.github.io/news/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://kaushikv070.github.io/news/assets/positive-charges.png": "daf90276ea78729a6986584a4dc8538192ae97fc",
+    "https://kaushikv070.github.io/news/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "https://kaushikv070.github.io/news/index.html": "155a6d3984e076251a056968dcfc2d784134c03b",
+    "https://kaushikv070.github.io/news/main.9e458667993ffd6d789d.js": "3bb92ae8124e5db7494615687f48f3508a75525e",
+    "https://kaushikv070.github.io/news/manifest.webmanifest": "1a9d5fc123bc34102a72d7835580990e008beb47",
+    "https://kaushikv070.github.io/news/polyfills.a4021de53358bb0fec14.js": "b47435a9ef2a4829f2f9dfd35599bde3614981b1",
+    "https://kaushikv070.github.io/news/runtime.e227d1a0e31cbccbf8ec.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "https://kaushikv070.github.io/news/styles.f4544bc3fbef0acc805b.css": "eaf0b17e4377553cb588865f56f447e63aa4618b"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
