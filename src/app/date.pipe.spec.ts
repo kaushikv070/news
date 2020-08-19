@@ -8,7 +8,7 @@ describe('DatePipe', () => {
 
   it('providing date value returns formated data', () => {
     const pipe = new DatePipe();
-    expect(pipe.transform('2017-03-13T12:18:31.000Z')).not.toBe('3 years ago');
+    expect(pipe.transform('2017-03-13T12:18:31.000Z')).toBe('3 years ago');
   });
 
   it('providing no value returns fallback', () => {
