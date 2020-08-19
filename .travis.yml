@@ -11,7 +11,7 @@ before_script:
 script:
 - ng lint news --fix
 - npm run test-headless
-- ng build --prod --base-href https://github.com/kaushikv070/news
+- ng build --prod --base-href https://kaushikv070.github.io/news/
 
 deploy:
   provider: pages
